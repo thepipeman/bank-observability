@@ -7,3 +7,8 @@ server:
   port: 8500
   servlet:
     context-path: /api
+
+#logging:
+#  driver: fluentd
+#  options:
+#    fluentd-address: host.docker.internal:24224

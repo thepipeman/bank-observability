@@ -2,8 +2,10 @@ package io.pipecrafts.bank.core.casa;
 
 import io.pipecrafts.bank.core.casa.operation.DebitAccount;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RequestMapping("/accounts")
 @RestController
 @RequiredArgsConstructor
@@ -22,11 +24,14 @@ public class AccountController {
   }
 
   private Account getDummy(String number) {
-    return Account.builder()
+    final var account = Account.builder()
       .id(1L)
       .number(number)
       .balance(5000.0)
       .customerId(1L)
       .build();
+
+    log.info("Returning account {}", account);
+    return account;
   }
 }

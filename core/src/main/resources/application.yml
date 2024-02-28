@@ -7,3 +7,10 @@ server:
   port: 8500
   servlet:
     context-path: /api
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus

@@ -48,8 +48,9 @@
     <!--  Observability  -->
     <dependency>
       <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-registry-prometheus</artifactId>
-      <version>1.12.3</version>
+      <artifactId>micrometer-registry-otlp</artifactId>
+      <scope>runtime</scope>
+<!--      <version>1.12.3</version>-->
     </dependency>
 
 

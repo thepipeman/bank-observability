@@ -3,7 +3,6 @@ global:
   evaluation_interval: 10s
 
 scrape_configs:
-  - job_name: 'bank-observability'
-    metrics_path: /api/actuator/prometheus
+  - job_name: 'otel-collector'
     static_configs:
-      - targets: ['host.docker.internal:8500']
+      - targets: ['otel-collector:8889']
